@@ -87,7 +87,7 @@ NameList: AGL For New Fonts
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 57304 29 12
+WinInfo: 57188 29 12
 BeginPrivate: 0
 EndPrivate
 TeXData: 1 16777216 0 346030 173015 115343 0 1048576 115343 783286 444596 497025 792723 393216 433062 380633 303038 157286 324010 404750 52429 2506097 1059062 262144
@@ -591,6 +591,7 @@ SplineSet
  466 228 466 228 469 231 c 0,57,58
  476 238 476 238 469 246 c 2,34,-1
 EndSplineSet
+Ligature2: "'liga' Standard Ligatures in Latin lookup 0 subtable" h o m e
 EndChar
 
 StartChar: uniE002
