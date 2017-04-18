@@ -1,0 +1,29 @@
+{
+  "name": "@zomoz/icon-font",
+  "version": "0.1.0",
+  "description": "Icon Font for ZomoZ projects",
+  "private": false,
+  "scripts": {
+    "build": "fontforge -script build.pe zomoz-icons-regular.sfd"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zoitravel/zomoz-font.git"
+  },
+  "keywords": [
+    "font",
+    "font-forge",
+    "icons",
+    "zomoz"
+  ],
+  "author": "Manuel Pacheco",
+  "contributors": [
+    "Claudia Amantini",
+    "Sofi Kelesarian"
+  ],
+  "license": "CC-BY-NC-4.0",
+  "bugs": {
+    "url": "https://github.com/zoitravel/zomoz-font/issues"
+  },
+  "homepage": "https://github.com/zoitravel/zomoz-font#readme"
+}
