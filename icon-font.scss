@@ -1,4 +1,27 @@
+// Include the font
+
 @font-face {
   font-family: 'ZomoZ Icons';
   src: url('./icon-font.woff') format('woff');
+}
+
+// Class to use the icons
+
+.zmz-icons {
+  display: inline-block;
+
+  font-family: 'ZomoZ Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+
+  line-height: 1;
+
+  white-space: nowrap;
+  word-wrap: normal;
+  text-transform: none;
+  letter-spacing: normal;
+  direction: ltr;
+
+  -webkit-font-smoothing: antialiased;
 }
