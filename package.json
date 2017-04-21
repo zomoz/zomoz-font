@@ -4,7 +4,7 @@
   "description": "Icon Font for ZomoZ projects",
   "private": false,
   "scripts": {
-    "build": "fontforge -script build.pe icon-font.sfd"
+    "build": "fontforge -script build.py"
   },
   "repository": {
     "type": "git",
