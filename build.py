@@ -1,23 +1,22 @@
 import fontforge
-import csv
+import os
 
 TABLE_NAME = "'liga' Standard Ligatures in Latin lookup 0"
 SUBTABLE_NAME = TABLE_NAME + ' subtable'
+START_CODEPOINT = 57344
 
 GLYPH_DICTIONARY = { '_': 'underscore' }
 
-# Abstracts away how to parse the icon configurations
-def getInfo(filename):
-  with open(filename, 'rb') as file:
-    reader = csv.reader(file, delimiter=' ', skipinitialspace=True)
-    return list(reader)
+# Return filenames in the 'glyphs' folder, without extension
+def getIconNames():
+  return map(lambda f: os.path.splitext(f)[0], os.listdir('glyphs'))
 
 # Inserts elements in a font
-def insertIcons(font, elements):
-  for elem in elements:
-    code, name = elem
+def insertIcons(font, names):
+  for name, i in zip(names, xrange(len(names))):
+    code = START_CODEPOINT + i
 
-    glyph = font.createMappedChar(int(code))
+    glyph = font.createMappedChar(code)
     glyph.importOutlines('glyphs/' + name + '.svg')
     glyph.addPosSub(SUBTABLE_NAME, tuple(map(lambda x: GLYPH_DICTIONARY.get(x, x), name)))
 
@@ -28,9 +27,9 @@ def generateFonts(font, name):
 # Main method to generate the fonts
 def main():
   font = fontforge.open('base-font.sfd')
-  info = getInfo('ligatures.csv')
+  names = getIconNames()
 
-  insertIcons(font, info)
+  insertIcons(font, names)
 
   generateFonts(font, 'icon-font')
 
