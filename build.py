@@ -15,6 +15,7 @@ def getIconNames():
 def insertIcons(font, names):
   for name, i in zip(names, xrange(len(names))):
     code = START_CODEPOINT + i
+    print(name)
 
     glyph = font.createMappedChar(code)
     glyph.importOutlines('glyphs/' + name + '.svg')
@@ -23,6 +24,7 @@ def insertIcons(font, names):
 # Given a FontForge font, generate output fonts
 def generateFonts(font, name):
   font.generate(name + '.woff') # Web Open Format output
+  font.generate(name + '.otf') # Web Open Format output
   
 # Main method to generate the fonts
 def main():
