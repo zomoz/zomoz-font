@@ -1,10 +1,11 @@
 {
   "name": "@zomoz/icon-font",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Icon Font for ZomoZ projects",
   "private": false,
   "scripts": {
-    "build": "fontforge -script build.py"
+    "build": "fontforge -script build.py",
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
