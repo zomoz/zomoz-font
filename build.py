@@ -5,11 +5,23 @@ TABLE_NAME = "'liga' Standard Ligatures in Latin lookup 0"
 SUBTABLE_NAME = TABLE_NAME + ' subtable'
 START_CODEPOINT = 57344
 
-GLYPH_DICTIONARY = { '_': 'underscore' }
+GLYPH_DICTIONARY = {
+  '_': 'underscore',
+  '0': 'zero',
+  '1': 'one',
+  '2': 'two',
+  '3': 'three',
+  '4': 'four',
+  '5': 'five',
+  '6': 'six',
+  '7': 'seven',
+  '8': 'eight',
+  '9': 'nine'
+}
 
 # Return filenames in the 'glyphs' folder, without extension
 def getIconNames():
-  return map(lambda f: os.path.splitext(f)[0], os.listdir('glyphs'))
+  return sorted(map(lambda f: os.path.splitext(f)[0], os.listdir('glyphs')))
 
 # Inserts elements in a font
 def insertIcons(font, names):
