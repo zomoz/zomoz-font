@@ -1,6 +1,6 @@
 {
   "name": "@zomoz/icon-font",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Icon Font for ZomoZ projects",
   "private": false,
   "scripts": {
