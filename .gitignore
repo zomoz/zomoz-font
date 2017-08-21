@@ -2,3 +2,5 @@ node_modules/
 npm-debug.log
 icon-font.woff
 icon-font.otf
+
+\.DS_Store
